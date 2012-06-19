@@ -1,6 +1,6 @@
 {
   "name": "stylesheet-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrap your stylesheet in a class or id",
   "author": { "name": "Piotr Pardel", "email": "piotrpardel@gmail.com" },
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/piotrekpa/stylesheet-wrapper"
   },
   "main": "index.js",
-  "bin" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
+  "binl" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
   "dependencies": {
     "less"           : ">= 1.3.0",
     "commander"      : ">= 0"
