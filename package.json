@@ -1,11 +1,11 @@
 {
   "name": "stylesheet-wrapper",
   "version": "0.0.1",
-  "description": "Wrap your stylesheet in class or id",
+  "description": "Wrap your stylesheet in a class or id",
   "author": { "name": "Piotr Pardel", "email": "piotrpardel@gmail.com" },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:piotr_p/stylesheet-wrapper.git"
+    "url": "https://github.com/piotrekpa/stylesheet-wrapper"
   },
   "main": "index.js",
   "scripts" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
