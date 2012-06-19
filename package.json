@@ -1,0 +1,22 @@
+{
+  "name": "stylesheet-wrapper",
+  "version": "0.0.1",
+  "description": "Wrap your stylesheet in class or id",
+  "author": { "name": "Piotr Pardel", "email": "piotrpardel@gmail.com" },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:piotr_p/stylesheet-wrapper.git"
+  },
+  "main": "index.js",
+  "scripts" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
+  "dependencies": {
+    "less"           : ">= 1.3.0",
+    "commander"      : ">= 0"
+  },
+  "engines": { "node": ">= 0.6.17" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "keywords": ["stylesheet", "wrap", "wrapper", "less"]
+}
