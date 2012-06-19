@@ -42,10 +42,15 @@ Wrapper.prototype = {
 	},
 
 	addPrefixAndSuffix : function(next, $){
-		if('data' in $){
-			$.data = '#main {' + $.data + '}';
-			next();
+		if('selector' in this.options){
+			if('data' in $){
+				$.data = this.options.selector + ' {' + $.data + '}';
+				next();
+			}
+		}else{
+			throw("You must specify a selector");
 		}
+
 	},
 
 	parse : function(next, $){
@@ -74,7 +79,8 @@ Wrapper.prototype = {
 // var w = new Wrapper({
 // 	inputFile : './testcss.css',
 // 	outputFile : './testout.css',
-// 	compress : true
+// 	compress : true,
+//  selector : '#main'
 // });
 
 module.exports = Wrapper;

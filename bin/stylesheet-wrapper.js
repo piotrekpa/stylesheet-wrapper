@@ -11,12 +11,13 @@ var program = require('commander'),
 
 program
 	.version('0.0.1')
-	.option('-i, --input [input_file]', 'Input file')
+	.option('-s, --selector [selector]', 'Your selector as prefix (e.g. .wrapper; #container')
+	.option('-i, --input [filename]', 'Input file')
 	.option('-o, --output [output_file]', 'Input file')
 	.option('-c, --compress', 'Compress output file')
 	.parse(process.argv);
 
-
+if (program.selector) { options.selector = program.selector; }
 if (program.output) { options.outputFile = program.output; }
 if (program.input) { options.inputFile = program.input; }
 if (program.compress) { options.compress = program.compress; }
