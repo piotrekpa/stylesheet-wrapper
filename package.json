@@ -8,7 +8,7 @@
     "url": "https://github.com/piotrekpa/stylesheet-wrapper"
   },
   "main": "index.js",
-  "scripts" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
+  "bin" : {"stylesheet-wrapper" : "./bin/stylesheet-wrapper.js"},
   "dependencies": {
     "less"           : ">= 1.3.0",
     "commander"      : ">= 0"
