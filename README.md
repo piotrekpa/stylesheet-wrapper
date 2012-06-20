@@ -1,6 +1,6 @@
 # Stylesheet-wrapper
 
-## Instalation
+## Installation
 
 	npm install stylesheet-wrapper
 
