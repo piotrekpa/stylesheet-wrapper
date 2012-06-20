@@ -1,6 +1,6 @@
 {
   "name": "stylesheet-wrapper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Wrap your stylesheet in a class or id",
   "author": { "name": "Piotr Pardel", "email": "piotrpardel@gmail.com" },
   "repository": {
