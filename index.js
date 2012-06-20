@@ -55,6 +55,9 @@ Wrapper.prototype = {
   parse: function (next, $) {
     var options = this.options;
     parser.parse($.data, function (err, data) {
+      if (err) {
+        throw (err.message);
+      }
       $.data = data.toCSS({compress: options.compress});
       next();
     });
