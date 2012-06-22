@@ -1,4 +1,5 @@
 var less = require('less'),
+    stylus = require('stylus'),
     utils = require('./utils.js'),
     fs = require('fs'),
     parser = new (less.Parser);
@@ -54,13 +55,27 @@ Wrapper.prototype = {
 
   parse: function (next, $) {
     var options = this.options;
-    parser.parse($.data, function (err, data) {
-      if (err) {
-        throw (err.message);
-      }
-      $.data = data.toCSS({compress: options.compress});
-      next();
-    });
+    if (this.options.parser === 'less') {
+      parser.parse($.data, function (err, data) {
+        if (err) {
+          throw (err.message);
+        }
+        $.data = data.toCSS({compress: options.compress});
+        next();
+      });
+    } else if (this.options.parser === 'stylus') {
+      stylus($.data).render(function (err, data) {
+        if (err) {
+          throw (err.message);
+        }
+        $.data = data;
+        next();
+      });
+    } else if (!('parser' in this.options)) {
+      throw ("You must specify a parser");
+    } else {
+      throw (self.options.parser + ' is not a valid parser.');
+    }
   },
 
   printResults: function (next, $) {

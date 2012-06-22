@@ -9,7 +9,7 @@
 type `stylesheet-wrapper --help`.
 example
 
-	stylesheet-wrapper.js -i testin.css -o testout.css -c -s '#container'
+	stylesheet-wrapper.js -c less -i testin.css -o testout.css -c -s '#container'
 
 
 

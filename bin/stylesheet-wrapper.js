@@ -10,13 +10,15 @@ var program = require('commander'),
     options = {};
 
 program
-  .version('0.0.1')
+  .version('0.0.5')
+  .option('-p, --parser [parser]', "Parser. 'less' or 'stylus'")
   .option('-s, --selector [selector]', 'Your selector as prefix (e.g. .wrapper; #container')
   .option('-i, --input [filename]', 'Input file')
   .option('-o, --output [output_file]', 'Input file')
   .option('-c, --compress', 'Compress output file')
   .parse(process.argv);
 
+if (program.parser) { options.parser = program.parser; }
 if (program.selector) { options.selector = program.selector; }
 if (program.output) { options.outputFile = program.output; }
 if (program.input) { options.inputFile = program.input; }
